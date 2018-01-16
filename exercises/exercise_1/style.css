@@ -1,18 +1,71 @@
-h1{
-  font-family: arial;
-  font-size: 75px;
-  color: #6699ff;
-  margin-top: 20%;
-  text-align: center;
-  transition-duration: 1.5s;
+@font-face {
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Ceviche One', cursive;
+  font-family: 'Nosifer', cursive;
+  font-family: 'UnifrakturCook', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Sonsie One', cursive;
 
 }
-.container{
-  display: flex;
-  justify-content: center;
+
+
+h1{
+  font-family: "sonsie one", cursive;
+  font-size: 90px;
+  text-align: center;
+  color: #FFF4FA;
+  text-shadow: 5px 5px 5px #FF008B;
+  animation-name: emma;
+  animation-duration: 2.5s;
+  margin-left: 15%;
 }
-h1:hover{
-  font-size: 175px;
-  color: magenta;
-  
+body{
+  background-color: #5EB4FC;
+}
+.image{
+  max-width: 250px;
+  max-height: inherit;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+.container{
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+@keyframes emma {
+  0%  {color:none;}
+ 20%  {color:none;
+       opacity: 0;}
+ 30% {color:#FFF4FA;
+       opacity: 1;text-shadow: none;}
+ 31%  {color:none;
+       opacity: 0;text-shadow: none;}
+ 45% {color:#FFF4FA;
+       opacity: 1;text-shadow: none;}
+ 55% {color:none;
+       opacity: 0;text-shadow: none;}
+ 60% {color:none;
+       opacity: 0;text-shadow: none;}
+ 63%{color:#FFF4FA;
+       opacity: 1;text-shadow: none;}
+ 67%{color:none;
+       opacity: 0;text-shadow: none;}
+ 68%{color:#FFF4FA;
+       opacity: 1;text-shadow: none;}
+70%{color:none;
+      opacity: 0;text-shadow: none;}
+      75%{color:#FFF4FA;
+            opacity: 1;text-shadow: none;}
+     77%{color:none;
+           opacity: 0;text-shadow: none;}
+
+ 100%{color:#FFF4FA;
+       opacity: 1;
+     text-shadow: 5px 5px 5px #FF008B;}
+
 }
