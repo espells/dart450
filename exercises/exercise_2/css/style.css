@@ -1,0 +1,55 @@
+/*
+
+DART 450, Winter 2018
+Exercise 02
+Emma Spellacy
+
+Some description of the CSS styling
+
+*/
+
+body {
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.metitle{
+  font-family: "avenir", sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  margin-right: 20%;
+}
+
+.regular_fact{
+  font-family: "avenir", sans-serif;
+  font-size: 2em;
+  margin-top: 2em;
+}
+#shape{
+  width: 10px;
+  height: 10px;
+  background-color: red;
+
+}
+.fact_two{
+  margin-left: 5em;
+}
+.shapeContainer{
+  max-width: 100px;
+  margin-top: 20%;
+}
+.shape1{
+
+}
+.shape2{
+  margin-left: 50px;
+}
+.shape3{
+
+}
+img{
+
+}
