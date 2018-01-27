@@ -27,16 +27,16 @@ $('.message2').click(function(){
 $('.message2').empty();
 });
 
-var delay = 25000;  
+var delay =30000;  
 setTimeout(function () { 
-$('.message3').text("You dont like my Lego story?");
+$('.message3').text("You don't like my Lego story?");
  },delay);
 
 $('.message3').click(function(){
 $('.message3').empty();
 });
 
-var delay = 30000;  
+var delay = 35000;  
 setTimeout(function () { 
 $('.message4').text("Its based on a true story though...");
  },delay);
@@ -44,7 +44,7 @@ $('.message4').text("Its based on a true story though...");
 $('.message4').click(function(){
 $('.message4').empty();
 });
-var delay = 35000;  
+var delay = 40000;  
 setTimeout(function () { 
 $('.message5').text("Fine. I'll let you read. Go on.");
  },delay);
@@ -57,7 +57,7 @@ $('.message5').empty();
   $('.div1').click(function(){
 
     $('.div1').animate({
-      height: '50px'
+      height: '10px'
     },5000);
 
     $('.div1').animate({
@@ -69,7 +69,7 @@ $('.message5').empty();
   $('.div2').click(function(){
 
     $('.div2').animate({
-      height: '100px'
+      height: '10px'
     },1000);
 
     $('.div2').animate({
@@ -81,12 +81,12 @@ $('.message5').empty();
   $('.div3').click(function(){
 
     $('.div3').animate({
-      height: '50px'
+      height: '10px'
     },500);
 
     $('.div3').animate({
       height: '425px'
-    },500);
+    },5000);
 
   });
 
@@ -105,16 +105,36 @@ $('.message5').empty();
   $('.div5').click(function(){
 
     $('.div5').animate({
-      opacity: '0'
+      height: '75px'
     },5000);
 
     $('.div5').animate({
-      opacity: '100'
+      height: '350px'
     });
 
   });
+  $('.div6').click(function(){
 
+    $('.div6').animate({
+      height: '10px'
+    },500);
 
+    $('.div6').animate({
+      height: '450px'
+    });
+
+  });
+  $('.div7').click(function(){
+
+    $('.div7').animate({
+      height: '10px'
+    },5000);
+
+    $('.div7').animate({
+      height: '200px'
+    });
+
+  });
 
 
 
