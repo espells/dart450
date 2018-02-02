@@ -1,0 +1,88 @@
+/*
+
+DART 450, Winter 2018
+Title of project
+Author
+
+Some description of the CSS styling
+
+*/
+@font-face {
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Sacramento', cursive;
+  font-family: 'Rock Salt', cursive;
+  font-family: 'Freckle Face', cursive;
+}
+body {
+display: flex;
+}
+#sentenceBox{
+  width: 400px;
+  height: 50px;;
+  margin-top: 23%;
+  margin-left: 10%;
+  align-items: center;
+  font-family: "Freckle Face";
+  font-size: 40px;
+
+}
+.wordContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 45%;
+  margin-top: 5%;
+  margin-left: 5%;
+
+}
+.word.person{
+  font-family: "permanent marker";
+}
+.word.person:hover{
+  color: violet;
+}
+.word.bad{
+  font-family: "amatic SC", sans-serif;
+}
+.word.bad:hover{
+  color: red;
+}
+.word.food{
+  font-family: "permanent marker", cursive;
+}
+.word.food:hover{
+  color: yellow;
+}
+.word.greet{
+  font-family: "indie flower", cursive;
+}
+.word.greet:hover{
+  color: green;
+}
+.word.other{
+  font-family: "scramento",cursive;
+}
+.word.other:hover{
+  color:orange;
+}
+.word.verb{
+  font-family: "rock salt";
+}
+.word.verb:hover{
+  color: lightblue;
+}
+.word{
+padding: 30px;
+font-size: 20px;
+
+}
+footer{
+  font-family: "amatic Sc";
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
