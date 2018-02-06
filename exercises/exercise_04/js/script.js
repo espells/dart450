@@ -12,8 +12,11 @@ $(document).ready(function () {
 
   $('.word').click(function(){
          console.log("click word");
-         $('#sentenceBox').append($(this).text());
-         
+
+         var $toAdd = $('<span class="' + $(this).attr('class') + '">' + $(this).text() + '</span>');
+         $toAdd.removeClass('word');
+         $('#sentenceBox').append($toAdd);
+
       });
 /*$('.word').hover(function(){
   console.log("hover");

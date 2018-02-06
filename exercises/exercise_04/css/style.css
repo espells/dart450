@@ -22,7 +22,7 @@ display: flex;
 #sentenceBox{
   width: 400px;
   height: 50px;;
-  margin-top: 23%;
+  margin-top: 20%;
   margin-left: 10%;
   align-items: center;
   font-family: "Freckle Face";
@@ -38,40 +38,40 @@ display: flex;
   margin-left: 5%;
 
 }
-.word.person{
+.person{
   font-family: "permanent marker";
 }
-.word.person:hover{
+.person:hover{
   color: violet;
 }
-.word.bad{
+.bad{
   font-family: "amatic SC", sans-serif;
 }
-.word.bad:hover{
+.bad:hover{
   color: red;
 }
-.word.food{
+.food{
   font-family: "permanent marker", cursive;
 }
-.word.food:hover{
+.food:hover{
   color: yellow;
 }
-.word.greet{
+.greet{
   font-family: "indie flower", cursive;
 }
-.word.greet:hover{
+.greet:hover{
   color: green;
 }
-.word.other{
+.other{
   font-family: "scramento",cursive;
 }
-.word.other:hover{
+.other:hover{
   color:orange;
 }
-.word.verb{
+.verb{
   font-family: "rock salt";
 }
-.word.verb:hover{
+.verb:hover{
   color: lightblue;
 }
 .word{
