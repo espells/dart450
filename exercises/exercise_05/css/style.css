@@ -9,5 +9,12 @@ Some description of the CSS styling
 */
 
 body {
-  
+
+}
+.message{
+  font-size: 150px;
+  font-family: 'avenir', sans-serif;
+  color: white;
+  font-weight: 600;
+  align-self: center;
 }

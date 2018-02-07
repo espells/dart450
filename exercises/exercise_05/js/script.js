@@ -1,11 +1,10 @@
 /**********************************************
 
 DART 450, Winter 2018
-Title of Project
-Author
+Exercise 05
+Emma Spellacy
 
-Description of what the script does...
-
+Make background flash different colors.
 **********************************************/
 
 $(document).ready(function () {
@@ -30,7 +29,7 @@ $('body').css({ backgroundColor: colours[currentColour] });
     $('body').css({ backgroundColor: colours[currentColour] });
   },100);
 
-var text = ['HELLO', 'BONJOUR', 'CIAO', 'ALLO'];
+/*var text = ['HELLO', 'BONJOUR', 'CIAO', 'ALLO'];
 var currentText = 0; //"0" is the place in line according to the array.
 
   setInterval(function(){
@@ -40,5 +39,9 @@ var currentText = 0; //"0" is the place in line according to the array.
       currentText = 0;
     }
   },1000);
-
+*/
+var delay = 1000;  
+setTimeout(function () { 
+$('.message').text("HELLO");
+ },delay);
 });
