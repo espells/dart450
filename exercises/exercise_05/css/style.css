@@ -1,15 +1,21 @@
 /*
 
 DART 450, Winter 2018
-Title of project
-Author
+EXERCISE 05
+EMMA SPLLACY
 
-Some description of the CSS styling
 
 */
+@font-face {
+  font-family: 'Archivo Black', sans-serif;
+}
 
 body {
-
+font-family: "Archivo Black",sans-serif;
+font-size: 10em;
+margin-top: 15%;
+text-align: center;
+color: white;
 }
 .message{
   font-size: 150px;
