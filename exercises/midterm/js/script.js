@@ -18,7 +18,7 @@ $(".badbutton.1").click(function(){
 
 $(".badbutton.2").click(function(){
   console.log("click word");
-  window.alert("Even thought you're in Canada, you can still support a dumb cause! Afterall we are America's hat!");
+  window.alert("Even though you're in Canada, you can still support a dumb cause! Afterall we are America's hat!");
   window.open('https://donate.nra.org/donate','pop-up','width=650,height=500,left=400,top=200');
 });
 //NRA donation site popup
