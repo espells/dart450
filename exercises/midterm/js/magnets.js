@@ -19,7 +19,7 @@ $(document).ready(function () {
     'extremely', 'destined', 'fate', 'smart', 'intelligent', 'crazy',
     'earth', 'care', 'take', 'posess', 'awareness', 'demand', 'your',
     'their', 'driven', 'are', 'am', 'always', 'insatiable', 'long',
-    'growing', 'undeniably', 'the', 'will', 'have', 'and'
+    'growing', 'undeniably', 'the', 'will', 'have', 'and', 'ok'
   ]
 
   magnets.forEach(addMagnet)
