@@ -1,10 +1,8 @@
 /**********************************************
 
 DART 450, Winter 2018
-Title of Project
-Author
-
-Description of what the script does...
+Midterm- don't push my buttons
+Emma Spellacy
 
 **********************************************/
 
@@ -21,12 +19,12 @@ $(document).ready(function () {
     'their', 'driven', 'are', 'am', 'always', 'insatiable', 'long',
     'growing', 'undeniably', 'the', 'will', 'have', 'and', 'ok'
   ]
-
+//makes magnets each draggable
   magnets.forEach(addMagnet)
   $('.magnet').draggable()
 })
 
-window.alert("Glad you're feeling so loving today! Why don't you spread the love and leave something nice on the fridge?")
+window.alert("Glad you're feeling so loving today! Why don't you spread the love and leave something nice on the fridge?")//alerts on page load - tells user what to do.
 
 
 function addMagnet(text) {
@@ -43,3 +41,4 @@ function addMagnet(text) {
 
   $('.magnetposition').append($magnet)
 }
+// function for random scattering of words
