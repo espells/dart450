@@ -1,0 +1,122 @@
+/*
+
+DART 450, Winter 2018
+Title of project
+Author
+
+Some description of the CSS styling
+
+*/
+@font-face {
+font-family: 'Abril Fatface', cursive;
+font-family: 'VT323', monospace;
+}
+body {
+ margin: 50px;
+}
+.buttonContainer{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 30px;
+  font-family: "times", serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 20px #999;
+  width: 400px;
+  height: 400px;
+}
+
+.button:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
+.button.Bad:active{
+  background-color: darkred;
+}
+.button.Bad{
+    background-color: red;
+}
+.button.Good:active{
+  background-color: darkgreen;
+}
+.button.Good{
+  background-color: green;
+}
+.goodcontainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.happymessage{
+  font-family: cursive;
+  color: white;
+  font-size: 1.5em;
+  background-color: red;
+  position: fixed;
+  width: 200px;
+  padding: 5px;
+}
+
+.newmagnetposition{
+  width: 600px;
+  height: 300px;
+  background-color: blue;
+  margin-left:60%;
+  margin-top: 30%;
+  overflow: hidden;
+  z-index: 1;
+}
+.magnet{
+  border:1px solid black;
+  border-right: 2px solid black;
+  padding: 3px;
+  user-select: none;
+  background-color: white;
+
+}
+.badbutton_contain{
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left:15%;
+  margin-top: 5%;
+}
+.badbutton{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: red;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 30px;
+  font-family: "VT323", serif;
+  font-weight: normal;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 20px #999;
+}
+.badbutton:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
+.badbutton:active{
+  background-color: #cc0000;
+}
