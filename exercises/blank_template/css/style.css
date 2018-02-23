@@ -9,5 +9,8 @@ Some description of the CSS styling
 */
 
 body {
-  
+
+}
+object{
+  max-width: 400px;
 }
