@@ -18,14 +18,14 @@ $(".badbutton.1").click(function(){
 
 $(".badbutton.2").click(function(){
   console.log("click word");
-  window.alert("Even though you're in Canada, you can still support a dumb cause! Afterall we are America's hat!");
+  window.alert("Even though you're in Canada, you can still support a dumb cause! Afterall, we are America's hat!");
   window.open('https://donate.nra.org/donate','pop-up','width=650,height=500,left=400,top=200');
 });
 //NRA donation site popup
 
 $(".badbutton.3").click(function(){
   console.log("click word");
-  window.alert("Honestley who even cares about the world anyways?? Press that button a say goodbye to to it all!");
+  window.alert("Honestly, who even cares about the world anyways?? Press that button a say goodbye to to it all!");
   window.open('https://edge.alluremedia.com.au/m/l/2017/09/Nukesds2.jpg','pop-up','width=650,height=500,left=400,top=200');
 
 });
@@ -33,7 +33,7 @@ $(".badbutton.3").click(function(){
 
 $(".badbutton.4").click(function(){
   console.log("click word");
-  window.alert("Getting glitter all over is the worst. So treat your enemies to just that!");
+  window.alert("Getting glitter all over is the worst, so treat your enemies to just that!");
   window.open('https://www.ruindays.com/','pop-up','width=650,height=500,left=400,top=200');
 
 });
