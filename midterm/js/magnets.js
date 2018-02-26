@@ -18,7 +18,6 @@ $(document).ready(function () {
     'earth', 'care', 'take', 'posess', 'awareness', 'demand', 'your',
     'their', 'driven', 'are', 'am', 'always', 'insatiable', 'long',
     'growing', 'undeniably', 'the', 'will', 'have', 'and', 'ok'
-    'I', 'You', 'am', 'am','are', 'are', 'believe'
   ]
 //makes magnets each draggable
   magnets.forEach(addMagnet)
