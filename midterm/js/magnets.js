@@ -7,7 +7,7 @@ Emma Spellacy
 **********************************************/
 
 $(document).ready(function () {
-  // Randomly places all magnents when page loads as if scatterde on a fridge
+  // Randomly places all magnents when page loads as if scattered on a fridge
   var magnets = [
     'hello', 'I', 'love','you', 'me', 'they', 'adore',
     'admire', 'wish', 'heaven', 'with', 'lover', 'friend',
