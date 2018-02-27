@@ -22,6 +22,9 @@ $("#answer").blast({
 
 $(".blast").hide();
 
+$('#question').show();
+$('#answer').show();
+
 var currentQuestionChar = 0;
 
 setTimeout(function(){

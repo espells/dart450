@@ -9,6 +9,7 @@ we run through .blast() ends up with this class. */
 .blast {
 font-family: 'Arial', sans-serif;
 font-weight: bold;
+visibility: hidden;
 
 }
 .blastcontent{
@@ -22,10 +23,8 @@ body{
 #question{
   font-size: 100px;
   color: white;
-  display: none;
 }
 #answer{
   font-size: 50px;
   margin-bottom: 10px;
-  display: none;
 }
