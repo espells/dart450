@@ -5,7 +5,7 @@ Emma Spellacy
 */
 
 /* We have this here just to point out that EVERYTHING
-we run through .blast() ends up with this class. */
+we run through .blast() ends up with this class. This exercise simulates a typwrite effect */
 .blast {
 font-family: 'Arial', sans-serif;
 font-weight: bold;
