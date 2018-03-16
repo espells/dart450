@@ -3,7 +3,7 @@
 Exrcise 07- Final Practice
 Emma Spellacy
 
-Description of what the script does...
+lets user navigate with arrow keys on keyboard. 
 
 **********************************************/
 
@@ -27,6 +27,26 @@ $(document).ready(function () {
   if(event.which == 37){
       $('body, html').animate({
         scrollLeft: "-=" + $(window).width()
+      },1000);
+  }
+  });
+// scrolls downwards when bottom key is pressed.
+  $(document).keydown(function() {
+    console.log(event.which);
+
+  if(event.which == 40){
+      $('body, html').animate({
+        scrollTop: "+=" + $(window).height()
+      },1000);
+  }
+  });
+  // scrolls upwards when top key is pressed.
+  $(document).keydown(function() {
+    console.log(event.which);
+
+  if(event.which == 38){
+      $('body, html').animate({
+        scrollTop: "-=" + $(window).height()
       },1000);
   }
   });
