@@ -1,0 +1,41 @@
+/*
+
+DART 450, Winter 2018
+Title of project
+Author
+
+Some description of the CSS styling
+
+*/
+
+html{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+body {
+  display: inline-flex;
+  margin: 0;
+}
+div {
+  width: 100vw;
+  height: 100vh;
+
+}
+.text{
+  font-size: 150px;
+  color: white;
+  font-family: "Avenir";
+  padding: 120px;;
+}
+#blue{
+  background-color: blue;
+}
+#pink{
+  background-color: pink;
+}
+#green{
+  background-color: green;
+}
