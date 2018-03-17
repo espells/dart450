@@ -3,11 +3,16 @@
 Exrcise 07- Final Practice
 Emma Spellacy
 
-lets user navigate with arrow keys on keyboard. 
+lets user navigate with arrow keys on keyboard.
 
 **********************************************/
 
 $(document).ready(function () {
+
+//  slow fade in of text, each line individually, with same class. 
+  $(".text_intro").each(function(index) {
+    $(this).delay(2000*index).fadeIn(2000);
+});
 
 // prints out which key has been pressed
   $(document).keydown(function() {
@@ -37,7 +42,7 @@ $(document).ready(function () {
   if(event.which == 40){
       $('body, html').animate({
         scrollTop: "+=" + $(window).height()
-      },1000);
+      },2000);
   }
   });
   // scrolls upwards when top key is pressed.
@@ -47,7 +52,7 @@ $(document).ready(function () {
   if(event.which == 38){
       $('body, html').animate({
         scrollTop: "-=" + $(window).height()
-      },1000);
+      },2000);
   }
   });
 

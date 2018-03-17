@@ -16,17 +16,29 @@ html{
   overflow: hidden;
 
 }
+section {
+  width: 100vw;
+  height: 100vh;
+
+}
 
 .horizontal_scroll {
   display: inline-flex;
-  
+
 }
 .vertical_scroll{
   display: block;
 }
-div {
-  width: 100vw;
-  height: 100vh;
+
+.text_intro{
+  display: none;
+  text-align: center;
+  font-size: 6em;
+  color: white;
+  font-family: serif;
+  width: 800px;
+  margin-left: 17%;
+  margin-top: 10%;
 
 }
 .text{
