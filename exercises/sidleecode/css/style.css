@@ -1,0 +1,30 @@
+/*
+did you know?
+Blast.js ex06
+Emma Spellacy
+*/
+
+/* We have this here just to point out that EVERYTHING
+we run through .blast() ends up with this class. This exercise simulates a typwrite effect */
+.blast {
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+
+}
+.blastcontent{
+  margin-left: 10%;
+  margin-top: 5%;
+}
+body{
+  background-color: pink;
+
+}
+#question{
+  font-size: 100px;
+  color: white;
+  display: none;
+}
+#answer{
+  font-size: 50px;
+  display: none;
+}
