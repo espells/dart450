@@ -33,7 +33,7 @@ section {
 .text_intro{
   display: none;
   text-align: center;
-  font-size: 6em;
+  font-size: 3em;
   color: white;
   font-family: serif;
   width: 800px;
@@ -42,7 +42,7 @@ section {
 
 }
 .text{
-  font-size: 150px;
+  font-size: 3em;
   color: white;
   font-family: "Avenir";
   padding: 120px;
