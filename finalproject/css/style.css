@@ -1,13 +1,122 @@
 /*
 
 DART 450, Winter 2018
-Title of project
-Author
+Final Project
+Emma Spellacy
 
 Some description of the CSS styling
 
 */
+body{
+  margin: 0;
+}
+html{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 
-body {
-  
+}
+section {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.horizontal_scroll {
+  display: inline-flex;
+
+}
+.vertical_scroll{
+  display: block;
+}
+
+.text_intro{
+  display: none;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-family: 'Josefin Sans';
+  position: relative;
+  margin-top: 10%;
+}
+.text{
+  font-size: 3em;
+  color: white;
+  font-family: "Avenir";
+  padding: 120px;
+  margin: 0;
+
+}
+.answer_container{
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+  left: 31%;
+  top: 20%;
+  overflow: hidden;
+}
+.answer{
+  padding-right: 200px;
+
+}
+
+#v1{
+  background-color: #A3BCF9;
+}
+
+#v2{
+  background-color: orange;
+}
+#home{
+  background-color: #A3BCF9;
+}
+#pink{
+  background-color: pink;
+}
+#green{
+  background-color: green;
+}
+.material-icons.down {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 1);
+  left:49%;
+  margin-top: 20%;
+  bottom: 10px;
+  position: fixed;
+}
+.option{
+  z-index: 1;
+  font-size: 3em;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+  font-family: 'Josefin Sans';
+
+}
+.option_answer_yes{
+  z-index: 2;
+  font-size: 2em;
+  color: white;
+  font-family: 'Josefin Sans';
+  left: 49%;
+  top: 185%;
+  display: flex;
+  position: absolute;
+}
+.option_answer_no{
+  z-index: 2;
+  font-size: 2em;
+  color: white;
+  font-family: 'Josefin Sans';
+  position: absolute;
+  left: 90%;
+  top:150%;
+}
+.v1_container{
+  display: flex;
+  justify-content: center;
 }

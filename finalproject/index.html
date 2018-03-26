@@ -1,10 +1,11 @@
 <!-- ************************************************************************
 
 DART 450, Winter 2018
-Final Project - Web Intervention
+Final Project
 Emma Spellacy
 
-This html holds the contents of the main page.
+Description of project and purpose of HTML...
+
 ************************************************************************ -->
 
 <!DOCTYPE html>
@@ -15,17 +16,20 @@ This html holds the contents of the main page.
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <title>Web Intervention</title>
+  <title>Title of project</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--  Responsive voice script-->
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 
-  <!-- Include jQuery via the CDN -->
+<!-- FONTS  -->
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,400i,600,600i|Quicksand:300,400,500,700" rel="stylesheet">
+  <!--ICONS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- Uncomment the lines below to include jQuery UI -->
-  <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
-
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <!-- Include the script file -->
   <script src="js/script.js"></script>
 
@@ -34,8 +38,51 @@ This html holds the contents of the main page.
 <!-- Comment about the body of the HTML -->
 
 <body>
+    <div class="horizontal_scroll">
 
-  <!-- HTML specifying the webpage goes here -->
+        <section id="home">
+
+          <div class="text_intro">Hi there. <br><br>Want to talk one on one? </div>
+
+          <div class="answer_container">
+            <div class="answer yes"> I'd love to. </div>
+            <div class="answer no"> No thanks. </div>
+          </div>
+
+          <i class="material-icons down">keyboard_arrow_down</i>
+
+        </section>
+
+        <section id="pink">
+
+            <div class="text">horizontal option 1</div>
+
+        </section>
+
+        <section id="green">
+
+            <div class="text">horizontal option 2</div>
+        </section>
+
+    </div>
+
+    <div class="vertical_scroll">
+
+      <section id="v1">
+        <div class="v1_container">
+
+            <div class="option">You need to confront your roomate on their dirty pile of dishes.</div>
+
+        </div>
+            <div class="option_answer_yes"> Yes </div>
+            <div class="option_answer_no"> No </div>
+      </section>
+
+      <section id="v2">
+        <div class="option"> vertical option 2</div>
+      </section>
+
+    </div>
 
 </body>
 
