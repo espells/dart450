@@ -4,7 +4,6 @@ DART 450, Winter 2018
 Final Project
 Emma Spellacy
 
-Some description of the CSS styling
 
 */
 body{
@@ -26,9 +25,9 @@ section {
   display: inline-flex;
 
 }
-.vertical_scroll{
+/*.vertical_scroll{
   display: block;
-}
+}*/
 
 .text_intro{
   display: none;
@@ -60,25 +59,27 @@ section {
 }
 .answer{
   padding-right: 200px;
-
+  display: none;
 }
 
+#home{
+  background: linear-gradient(#A3BCF9, #4286f4)
+
+}
 #v1{
-  background-color: #A3BCF9;
+  background: linear-gradient(#4286f4, #c6a0f7);
 }
 
 #v2{
-  background-color: orange;
+background: linear-gradient(#c6a0f7, #4286f4);
+
 }
-#home{
-  background-color: #A3BCF9;
+#v3{
+background: linear-gradient(#c6a0f7, #4286f4);
+
 }
-#pink{
-  background-color: pink;
-}
-#green{
-  background-color: green;
-}
+
+
 .material-icons.down {
   font-size: 60px;
   color: rgba(255, 255, 255, 1);

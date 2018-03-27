@@ -3,14 +3,13 @@
 Final Project
 Emma Spellacy
 
+This script creates page navigation, contains repsonse voice
+
 
 **********************************************/
+var inMenu = true;
 
 $(document).ready(function () {
-
-
-
-
 
 
 //
@@ -27,13 +26,35 @@ $(document).ready(function () {
   $(".yes").click(function(){
     console.log("Lets Talk");
 
-    responsiveVoice.speak("Glad we can talk together now. Just click the down arrowkey on your computer and we can help you on your way.", "UK English Female", {rate: .75, pitch:.90});
+    responsiveVoice.speak("Glad we can talk together now. Press on the down arrow key on your device so we can get started!", "UK English Female", {rate: .75});
   })
 
   $(".no").click(function(){
-    console.log("Lets Talk");
 
-    responsiveVoice.speak("Wow. Ok. Guess you can deal with your own problems then. Go have fun sorting your daddy issues by yourself you little ingrate.", "UK English Female", {rate: .85});
+      console.log("BYE!");
+
+      responsiveVoice.speak("Wow. Ok. Guess you can deal with your own problems. Goodbye you little ingrate!", "UK English Female", {rate: .75});
+      setTimeout(function(){
+      window.close();
+
+    },7000);
+
+  })
+
+  $("#v1").each(function(){
+
+    console.log("Talking");
+
+    responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
+
+  })
+
+  $("#v2").each(function(){
+
+    console.log("Talking");
+
+    responsiveVoice.speak("Rough, pour one out for the fallen relationship.", "UK English Female", {rate: .75});
+
   })
 
 
@@ -57,26 +78,30 @@ $(document).ready(function () {
       $('body, html').animate({
         scrollLeft: "+=" + $(window).width()
       },1000);
-  }
-  });
-// scrolls backwards if right key has been pressed.
-  $(document).keydown(function() {
-    console.log(event.which);
+      inMenu = false
 
-  if(event.which == 37){
-      $('body, html').animate({
-        scrollLeft: "-=" + $(window).width()
-      },1000);
   }
   });
+// scrolls right if right key has been pressed.
+  // $(document).keydown(function() {
+  //   console.log(event.which);
+  //
+  // if(event.which == 37){
+  //     $('body, html').animate({
+  //       scrollLeft: "-=" + $(window).width()
+  //     },1000);
+  //
+  //
+  // }
+  // });
 // scrolls downwards when bottom key is pressed.
   $(document).keydown(function() {
     console.log(event.which);
 
-  if(event.which == 40){
+  if(event.which == 40 && inMenu){
       $('body, html').animate({
         scrollTop: "+=" + $(window).height()
-      },2000);
+      },1000);
   }
   });
   // scrolls upwards when top key is pressed.
