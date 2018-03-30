@@ -41,21 +41,23 @@ $(document).ready(function () {
 
   })
 
-  $("#v1").each(function(){
+  // $("#v1").one(function(){
+  //
+  //   console.log("Talking");
+  //
+  //   responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
+  //
+  // })
 
-    console.log("Talking");
 
-    responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
 
-  })
-
-  $("#v2").each(function(){
-
-    console.log("Talking");
-
-    responsiveVoice.speak("Rough, pour one out for the fallen relationship.", "UK English Female", {rate: .75});
-
-  })
+  // $("#v2").is(function(){
+  //
+  //   console.log("Talking");
+  //
+  //   responsiveVoice.speak("Rough, pour one out for the fallen relationship.", "UK English Female", {rate: .75});
+  //
+  // })
 
 
 
@@ -99,8 +101,15 @@ $(document).ready(function () {
     console.log(event.which);
 
   if(event.which == 40 && inMenu){
-      $('body, html').animate({
+      $('html').animate({
         scrollTop: "+=" + $(window).height()
+      },
+      {
+        complete: function(){
+          if($("#dishes").visible()){
+          responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
+        }
+        }
       },1000);
   }
   });

@@ -12,7 +12,7 @@ body{
 html{
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 
 }
 section {
@@ -45,6 +45,7 @@ section {
   padding: 120px;
   margin: 0;
 
+
 }
 .answer_container{
   display: flex;
@@ -67,7 +68,8 @@ section {
 
 }
 #v1{
-  background: linear-gradient(#4286f4, #c6a0f7);
+  background: linear-gradient(#c6a0f7, #4286f4);
+
 }
 
 #v2{
@@ -92,10 +94,13 @@ background: linear-gradient(#c6a0f7, #4286f4);
   z-index: 1;
   font-size: 3em;
   max-width: 600px;
+  max-height: 200px;
   text-align: center;
   margin-top: 20%;
   color: white;
   font-family: 'Josefin Sans';
+  vertical-align: middle;
+
 
 }
 .option_answer_yes{
@@ -120,4 +125,6 @@ background: linear-gradient(#c6a0f7, #4286f4);
 .v1_container{
   display: flex;
   justify-content: center;
+  width: 100vw;
+  height: 100vw;
 }
