@@ -31,14 +31,14 @@ $(document).ready(function () {
   $(".yes").click(function(){
     console.log("Lets Talk");
 
-    responsiveVoice.speak("Glad we can talk together now. Press on the down arrow key on your device so we can get started!", "UK English Female", {rate: .75});
+    responsiveVoice.speak("Glad we can talk together now. Press on the down arrow key on your device so we can get started!", "UK English Female", {rate: .95});
   });
 // intro, when user clicks 'no', computer responds poorly, says mean message, and closes the window.
   $(".no").click(function(){
 
       console.log("BYE!");
 
-      responsiveVoice.speak("Wow. Ok. Guess you can deal with your own problems. Goodbye you little ingrate!", "UK English Female", {rate: .75});
+      responsiveVoice.speak("Wow. Ok. Guess you can deal with your own problems. Goodbye you little ingrate!", "UK English Female", {rate: .95});
       setTimeout(function(){
       window.close();
 
@@ -129,16 +129,16 @@ $(document).ready(function () {
     });
 
     function setupCleanRoomAnnyang() {
-      correctAnnyangPhrase = "clean up your room";
-      correctResponse = "That's right. Now your roomate is cleaning your room and crying!";
-      incorrectResponse = "That's not right. Your roommate sneers and walks away!";
+      correctAnnyangPhrase = "Hey dick, we aren't animals. Do your damn dishes";
+      correctResponse = "That's what I'm talking about! Screw their feelings!";
+      incorrectResponse = "C'mon that's not what I said. Now, try again and don't hold back now!";
       annyang.resume();
     }
 
     function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "i don't want to see you anymore";
-      correctResponse = "You're all broken up!";
-      incorrectResponse = "Together forever!";
+      correctAnnyangPhrase = "i've fallen in love with someone else and never want to see you again.";
+      correctResponse = "you're sick to say that to someone you used to share a life with.";
+      incorrectResponse = "That will never work.";
       annyang.resume();
     }
 
@@ -166,7 +166,7 @@ function handleComputerVoice() {
 
     // dishes scenario
     if($("#dishes").visible(true)){
-      responsiveVoice.speak("Say after me, clean up your room!","UK English Female",
+      responsiveVoice.speak("Utterly disgusting. Say this to them. Hey dick, we aren't animals. Doo your damn dishes!","UK English Female",
       {
           onend: setupCleanRoomAnnyang
       });
@@ -174,7 +174,7 @@ function handleComputerVoice() {
 
   // breakup scenario
     else if($("#breakup").visible(true)){
-      responsiveVoice.speak("Say after me, i don't want to see you anymore!","UK English Female",
+      responsiveVoice.speak("That sucks to hear. How about saying this. I've fallen in love with someone else and never want to see you again.","UK English Female",
       {
           onend: setupBreakUpAnnyang
       });
