@@ -9,6 +9,9 @@ contains repsonse voice, annyang, and small animations
 
 **********************************************/
 var inMenu = true;
+var correctAnnyangPhrase = '';
+var correctResponse = '';
+var incorrectResponse = '';
 
 $(document).ready(function () {
 
@@ -29,7 +32,7 @@ $(document).ready(function () {
     console.log("Lets Talk");
 
     responsiveVoice.speak("Glad we can talk together now. Press on the down arrow key on your device so we can get started!", "UK English Female", {rate: .75});
-  })
+  });
 // intro, when user clicks 'no', computer responds poorly, says mean message, and closes the window.
   $(".no").click(function(){
 
@@ -41,7 +44,7 @@ $(document).ready(function () {
 
     },7000);
 
-  })
+  });
 
 
 
@@ -52,9 +55,12 @@ $(document).ready(function () {
 
 // scrolls to next div if right key has been pressed.
   if(event.which == 39 && inMenu){
-      $('body, html').animate({
+      $('html').animate({
         scrollLeft: "+=" + $(window).width()
-      },1000);
+      },{
+        duration: 1000,
+        complete: handleComputerVoice
+      });
   }
   });
 
@@ -76,7 +82,7 @@ $(document).ready(function () {
     console.log(event.which);
 
   if(event.which == 38){
-      $('body, html').animate({
+      $('html').animate({
         scrollTop: "-=" + $(window).height()
       },2000);
   }
@@ -95,10 +101,7 @@ $(document).ready(function () {
     // }
     // });
 
-// RESPONSIVE VOICE AND ANNYANG SCENARIOS 
-    var correctAnnyangPhrase = '';
-    var correctResponse = '';
-    var incorrectResponse = '';
+// RESPONSIVE VOICE AND ANNYANG SCENARIOS
 
 
       // Make sure annyang is available...
@@ -157,32 +160,26 @@ $(document).ready(function () {
 
     }
 
+function handleComputerVoice() {
+  // This function dictates what the computer says during each new section in the response process for each option.
+    console.log("Handle computer voice...");
 
+    // dishes scenario
+    if($("#dishes").visible(true)){
+      responsiveVoice.speak("Say after me, clean up your room!","UK English Female",
+      {
+          onend: setupCleanRoomAnnyang
+      });
+    }
 
+  // breakup scenario
+    else if($("#breakup").visible(true)){
+      responsiveVoice.speak("Say after me, i don't want to see you anymore!","UK English Female",
+      {
+          onend: setupBreakUpAnnyang
+      });
+    }
 
-
-
-// This function dictates what the computer says during each new section in the response process for each option.
-
-  // dishes scenario
-  if($("#dishes").visible()){
-    responsiveVoice.speak("Say after me, clean up your room!","UK English Female"
-    {
-        onend: setupCleanRoomAnnyang
-    });
-    function handleUserSpeech()
-  }
-// breakup scenario
-  else if($("#dishes01").visible()){
-    responsiveVoice.speak("Say after me, i don't want to see you anymore!","UK English Female"
-    {
-        onend: setupBreakUpAnnyang
-    });
-    function handleUserSpeech()
+  //  house burnt down scanario
 
 }
-//  house burnt down scanario
-
-
-
-};
