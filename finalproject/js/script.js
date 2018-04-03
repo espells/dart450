@@ -3,7 +3,8 @@
 Final Project
 Emma Spellacy
 
-This script creates page navigation, contains repsonse voice
+This script creates page navigation,
+contains repsonse voice, annyang, and small animations
 
 
 **********************************************/
@@ -12,7 +13,7 @@ var inMenu = true;
 $(document).ready(function () {
 
 
-//
+// fades in welcome message and answers
   $(".text_intro").each(function() {
     $(this).delay(1000).fadeIn(2000);
     // $(this).delay(2000).fadeOut('slow');
@@ -23,12 +24,13 @@ $(document).ready(function () {
     // $(this).delay(2000).fadeOut('slow');
   });
 
+//  Intro, when user clicks 'yes', computer resonds happilly.
   $(".yes").click(function(){
     console.log("Lets Talk");
 
     responsiveVoice.speak("Glad we can talk together now. Press on the down arrow key on your device so we can get started!", "UK English Female", {rate: .75});
   })
-
+// intro, when user clicks 'no', computer responds poorly, says mean message, and closes the window.
   $(".no").click(function(){
 
       console.log("BYE!");
@@ -41,33 +43,6 @@ $(document).ready(function () {
 
   })
 
-  // $("#v1").one(function(){
-  //
-  //   console.log("Talking");
-  //
-  //   responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
-  //
-  // })
-
-
-
-  // $("#v2").is(function(){
-  //
-  //   console.log("Talking");
-  //
-  //   responsiveVoice.speak("Rough, pour one out for the fallen relationship.", "UK English Female", {rate: .75});
-  //
-  // })
-
-
-
-
-
-
-
-
-
-
 
 
 // **************  KEYBOARD STUFF ********************************
@@ -76,26 +51,13 @@ $(document).ready(function () {
     console.log(event.which);
 
 // scrolls to next div if right key has been pressed.
-  if(event.which == 39){
+  if(event.which == 39 && inMenu){
       $('body, html').animate({
         scrollLeft: "+=" + $(window).width()
       },1000);
-      inMenu = false
-
   }
   });
-// scrolls right if right key has been pressed.
-  // $(document).keydown(function() {
-  //   console.log(event.which);
-  //
-  // if(event.which == 37){
-  //     $('body, html').animate({
-  //       scrollLeft: "-=" + $(window).width()
-  //     },1000);
-  //
-  //
-  // }
-  // });
+
 // scrolls downwards when bottom key is pressed.
   $(document).keydown(function() {
     console.log(event.which);
@@ -105,11 +67,7 @@ $(document).ready(function () {
         scrollTop: "+=" + $(window).height()
       },
       {
-        complete: function(){
-          if($("#dishes").visible()){
-          responsiveVoice.speak("Oh God, I hate that too.", "UK English Female", {rate: .75});
-        }
-        }
+        // complete: robotCommentary
       },1000);
   }
   });
@@ -124,28 +82,107 @@ $(document).ready(function () {
   }
   });
 
-  // if (annyang) {
-  // // Let's define our first command. First the text we expect, and then the function it should call
-  // var commands = {
-  //   'show tps report': function() {
-  //     $('#tpsreport').animate({bottom: '-100px'});
-  //   }
-  // };
-  //
-  // // Add our commands to annyang
-  // annyang.addCommands(commands);
-  //
-  // // Start listening. You can call this here, or attach this call to an event, button, etc.
-  // annyang.start();
+  // scrolls right if right key has been pressed.
+    // $(document).keydown(function() {
+    //   console.log(event.which);
+    //
+    // if(event.which == 37){
+    //     $('body, html').animate({
+    //       scrollLeft: "-=" + $(window).width()
+    //     },1000);
+    //
+    //
+    // }
+    // });
+
+// RESPONSIVE VOICE AND ANNYANG SCENARIOS 
+    var correctAnnyangPhrase = '';
+    var correctResponse = '';
+    var incorrectResponse = '';
+
+
+      // Make sure annyang is available...
+      if (annyang) {
+
+        var command = {
+
+          "*words": handleUserSpeech,
+
+        };
+
+        // Now we've defined the commands we give them to annyang
+        // by using its .addCommands() function.
+        annyang.addCommands(command);
+
+        // Finally we tell annyang to start listening with its
+        // .start() function
+        annyang.start();
+        annyang.pause();
+
+
+
+
+      }
+    });
+
+    function setupCleanRoomAnnyang() {
+      correctAnnyangPhrase = "clean up your room";
+      correctResponse = "That's right. Now your roomate is cleaning your room and crying!";
+      incorrectResponse = "That's not right. Your roommate sneers and walks away!";
+      annyang.resume();
+    }
+
+    function setupBreakUpAnnyang() {
+      correctAnnyangPhrase = "i don't want to see you anymore";
+      correctResponse = "You're all broken up!";
+      incorrectResponse = "Together forever!";
+      annyang.resume();
+    }
+
+
+    // handleUserSpeech(phrase)
+
+    function handleUserSpeech(phrase) {
+
+      phrase = phrase.toLowerCase();
+      console.log(phrase);
+      if (phrase === correctAnnyangPhrase) {
+        responsiveVoice.speak(correctResponse);
+      }
+      else {
+        responsiveVoice.speak(incorrectResponse);
+      }
+
+      return;
+
+    }
 
 
 
 
 
 
+// This function dictates what the computer says during each new section in the response process for each option.
+
+  // dishes scenario
+  if($("#dishes").visible()){
+    responsiveVoice.speak("Say after me, clean up your room!","UK English Female"
+    {
+        onend: setupCleanRoomAnnyang
+    });
+    function handleUserSpeech()
+  }
+// breakup scenario
+  else if($("#dishes01").visible()){
+    responsiveVoice.speak("Say after me, i don't want to see you anymore!","UK English Female"
+    {
+        onend: setupBreakUpAnnyang
+    });
+    function handleUserSpeech()
+
+}
+//  house burnt down scanario
 
 
 
-
-
-});
+};
