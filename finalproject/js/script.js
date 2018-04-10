@@ -122,23 +122,48 @@ $(document).ready(function () {
         annyang.start();
         annyang.pause();
 
-
-
-
       }
     });
 
     function setupCleanRoomAnnyang() {
-      correctAnnyangPhrase = "Hey dick, we aren't animals. Do your damn dishes";
+      correctAnnyangPhrase = "do your damn dishes";
       correctResponse = "That's what I'm talking about! Screw their feelings!";
-      incorrectResponse = "C'mon that's not what I said. Now, try again and don't hold back now!";
+      incorrectResponse = "That's not what I said. Now, try again and don't hold back!";
+      annyang.resume();
+    }
+
+    function setupCleanRoomAnnyang2(){
+      correctAnnyangPhrase = "you are so gross";
+      correctResponse = "Wow you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you  have said to me.";
+      incorrectResponse = "It's ok to be mean. Remember that time they didn't wash them for a weak?";
       annyang.resume();
     }
 
     function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "i've fallen in love with someone else and never want to see you again.";
-      correctResponse = "you're sick to say that to someone you used to share a life with.";
-      incorrectResponse = "That will never work.";
+      correctAnnyangPhrase = "i am in love with someone else";
+      correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
+      incorrectResponse = "That will never work. Now say what I told you to say.";
+      annyang.resume();
+    }
+
+    function setupBreakUpAnnyang2(){
+      correctAnnyangPhrase = "we need to break up";
+      correctResponse = " Wow, I think I may actually start crying myself and i'm not even your partner. Go on now and rip off the bandaid in real life.";
+      incorrectResponse = " I said with emotion. I thought I was the computer not you!";
+      annyang.resume();
+    }
+
+    function setupHouseFireAnnyang(){
+      correctAnnyangPhrase = "i am so sorry i burnt the house down";
+      correctResponse = " That's all you have to say? That you're sorry?";
+      incorrectResponse = " Is that the best you can do?";
+      annyang.resume();
+    }
+
+    function setupHouseFireAnnyang2(){
+      correctAnnyangPhrase = "i beg of you to forgive me";
+      correctResponse = " Well well well. I guess you're sorry after all. Be prepared that if this did happen in real life, your parents may not be as forgiving as I am. Best of luck!";
+      incorrectResponse = " I said beg, goddamn it! now get on your knees and do what I said!";
       annyang.resume();
     }
 
@@ -166,17 +191,48 @@ function handleComputerVoice() {
 
     // dishes scenario
     if($("#dishes").visible(true)){
-      responsiveVoice.speak("Utterly disgusting. Say this to them. Hey dick, we aren't animals. Doo your damn dishes!","UK English Female",
+      responsiveVoice.speak("Utterly disgusting. Tell them to Doo their damn dishes!","UK English Female",
       {
           onend: setupCleanRoomAnnyang
       });
     }
 
+    else if($("#dishes2").visible(true)){
+      responsiveVoice.speak(" Now you're all warmed up. If you really want to let them hear it say this. You are so gross.","UK English Female",
+      {
+          onend: setupCleanRoomAnnyang2
+      });
+    }
+
+
   // breakup scenario
     else if($("#breakup").visible(true)){
-      responsiveVoice.speak("That sucks to hear. How about saying this. I've fallen in love with someone else and never want to see you again.","UK English Female",
+      responsiveVoice.speak("That sucks to hear. How about saying this. I am in love with someone else.","UK English Female",
       {
           onend: setupBreakUpAnnyang
+      });
+
+    }
+
+    else if($("#breakup2").visible(true)){
+      responsiveVoice.speak("Time for the hard part. Repeat after me, and with some emotion this time: We need to breakup","UK English Female",
+      {
+          onend: setupBreakUpAnnyang2
+      });
+
+    }
+
+    else if($("#burntHouse").visible(true)){
+      responsiveVoice.speak(" I don't even know how the hell you did that! apologize for your stupidity. Repeat after me. i am so sorry i burnt the house down.", "UK English Female",
+      {
+        onend: setupHouseFireAnnyang
+      });
+    }
+
+    else if($("#burntHouse2").visible(true)){
+      responsiveVoice.speak("If you are really sorry you should beg for forgiveness. Say this: I beg of you to forgive me!", "UK English Female",
+      {
+        onend: setupHouseFireAnnyang2
       });
     }
 
