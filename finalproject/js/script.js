@@ -139,7 +139,7 @@ $(document).ready(function () {
       annyang.resume();
     }
 
-    function setupBreakUpAnnyang(showNextButton) {
+    function setupBreakUpAnnyang() {
       correctAnnyangPhrase = "yes";
       correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
       incorrectResponse = "That will never work. Now say what I told you to say.";
@@ -180,6 +180,7 @@ $(document).ready(function () {
       console.log(phrase);
       if (phrase === correctAnnyangPhrase) {
         responsiveVoice.speak(correctResponse);
+        showNextButton();
       }
       else {
         responsiveVoice.speak(incorrectResponse);
