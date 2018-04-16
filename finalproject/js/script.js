@@ -139,8 +139,8 @@ $(document).ready(function () {
       annyang.resume();
     }
 
-    function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "i am in love with someone else";
+    function setupBreakUpAnnyang(showNextButton) {
+      correctAnnyangPhrase = "yes";
       correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
       incorrectResponse = "That will never work. Now say what I told you to say.";
       annyang.resume();
@@ -165,6 +165,10 @@ $(document).ready(function () {
       correctResponse = " Well well well. I guess you're sorry after all. Be prepared that if this did happen in real life, your parents may not be as forgiving as I am. Best of luck!";
       incorrectResponse = " I said beg, goddamn it! now get on your knees and do what I said!";
       annyang.resume();
+    }
+
+    function showNextButton(){
+        $(".next").show();
     }
 
 
@@ -193,7 +197,8 @@ function handleComputerVoice() {
     if($("#dishes").visible(true)){
       responsiveVoice.speak("Utterly disgusting. Tell them to Doo their damn dishes!","UK English Female",
       {
-          onend: setupCleanRoomAnnyang
+          onend: setupCleanRoomAnnyang,showNextButton
+
       });
     }
 
