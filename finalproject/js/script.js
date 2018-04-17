@@ -140,7 +140,7 @@ $(document).ready(function () {
     }
 
     function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "yes";
+      correctAnnyangPhrase = "i am in love with someone else";
       correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
       incorrectResponse = "That will never work. Now say what I told you to say.";
       annyang.resume();
@@ -198,7 +198,7 @@ function handleComputerVoice() {
     if($("#dishes").visible(true)){
       responsiveVoice.speak("Utterly disgusting. Tell them to Doo their damn dishes!","UK English Female",
       {
-          onend: setupCleanRoomAnnyang,showNextButton
+          onend: setupCleanRoomAnnyang
 
       });
     }
