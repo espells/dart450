@@ -24,6 +24,7 @@ Description of project and purpose of HTML...
   <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <!-- annyang script -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script src ="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"> </script>
 
 <!-- FONTS  -->
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,400i,600,600i|Quicksand:300,400,500,700" rel="stylesheet">
@@ -44,7 +45,7 @@ Description of project and purpose of HTML...
 <body>
     <div class="horizontal_scroll">
 
-        <section id="home">
+        <section id="home" class="down">
 
           <div class="text_intro">Hi there. <br><br>Want to talk one on one? </div>
 
@@ -60,7 +61,7 @@ Description of project and purpose of HTML...
 <!-- Option 1- DISHES -->
     <div class="horizontal_scroll">
 
-          <section class="v1">
+          <section class="v1 up down right">
             <div class="v1_container">
 
                 <div class="option">You need to confront your roomate on their dirty pile of dishes.</div>
@@ -69,7 +70,9 @@ Description of project and purpose of HTML...
           </section>
 
           <section class="v1">
-            <div id="dishes"></div>
+            <div id="dishes">
+              <div id="herLoader"></div>
+            </div>
 
           </section>
 
@@ -98,8 +101,8 @@ Description of project and purpose of HTML...
               <section class="v1">
 
                 <div id="breakup">
-                  <div class="circle next">
-                    <i class="material-icons next">arrow_forward</i>
+                  <div class="next circle">
+                    <i class="next material-icons">arrow_forward</i>
                   </div>
                 </div>
 

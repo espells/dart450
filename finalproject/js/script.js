@@ -15,6 +15,23 @@ var incorrectResponse = '';
 
 $(document).ready(function () {
 
+$(".next").hide();
+
+
+  var loaderSymbol = new Vivus( 'herLoader',
+  {
+    start: 'autostart',
+    type: 'oneByOne',
+    duration: 100,
+    file: '/images/squiggle.svg'
+  }, mycallback);
+
+  function mycallback(){
+    loaderSymbol
+      .stop()
+      .reset()
+      .play()
+  }
 
 // fades in welcome message and answers
   $(".text_intro").each(function() {
@@ -54,13 +71,14 @@ $(document).ready(function () {
     console.log(event.which);
 
 // scrolls to next div if right key has been pressed.
-  if(event.which == 39 && inMenu){
+  if(event.which == 39 && !$('#home').visible()){
       $('html').animate({
         scrollLeft: "+=" + $(window).width()
       },{
         duration: 1000,
         complete: handleComputerVoice
       });
+      inMenu = false;
   }
   });
 
@@ -73,7 +91,6 @@ $(document).ready(function () {
         scrollTop: "+=" + $(window).height()
       },
       {
-        // complete: robotCommentary
       },1000);
   }
   });
@@ -81,7 +98,8 @@ $(document).ready(function () {
   $(document).keydown(function() {
     console.log(event.which);
 
-  if(event.which == 38){
+  if(event.which == 38 && inMenu){
+
       $('html').animate({
         scrollTop: "-=" + $(window).height()
       },2000);
@@ -140,7 +158,7 @@ $(document).ready(function () {
     }
 
     function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "i am in love with someone else";
+      correctAnnyangPhrase = "hello";
       correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
       incorrectResponse = "That will never work. Now say what I told you to say.";
       annyang.resume();
@@ -179,8 +197,10 @@ $(document).ready(function () {
       phrase = phrase.toLowerCase();
       console.log(phrase);
       if (phrase === correctAnnyangPhrase) {
-        responsiveVoice.speak(correctResponse);
-        showNextButton();
+        responsiveVoice.speak(correctResponse,"UK English Female", {onend: showNextButton});
+        console.log("arrow");
+
+        // showNextButton();
       }
       else {
         responsiveVoice.speak(incorrectResponse);
@@ -244,4 +264,6 @@ function handleComputerVoice() {
 
   //  house burnt down scanario
 
-}
+
+
+  };
