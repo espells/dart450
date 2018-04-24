@@ -144,7 +144,7 @@ $(".next").hide();
     });
 
     function setupCleanRoomAnnyang() {
-      correctAnnyangPhrase = "do your damn dishes";
+      correctAnnyangPhrase = "yes";
       correctResponse = "That's what I'm talking about! Screw their feelings!";
       incorrectResponse = "That's not what I said. Now, try again and don't hold back!";
       annyang.resume();
@@ -158,7 +158,7 @@ $(".next").hide();
     }
 
     function setupBreakUpAnnyang() {
-      correctAnnyangPhrase = "hello";
+      correctAnnyangPhrase = "i am in love with someone else";
       correctResponse = "you're sick to say that to someone you used to share a life with. But I like it";
       incorrectResponse = "That will never work. Now say what I told you to say.";
       annyang.resume();

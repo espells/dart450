@@ -46,7 +46,9 @@ section {
 
 }
 .answer_container{
+  max-width: 500px;
   display: flex;
+  justify-content: space-between;
   position: relative;
   margin-bottom: 10px;
   color: white;
@@ -57,31 +59,36 @@ section {
   overflow: hidden;
 }
 .answer{
-  padding-right: 200px;
   display: none;
+  max-width: 160px;
+}
+.answer:hover{
+  opacity: .5;
+  color: blue;
+  cursor: pointer;
 }
 
 #home{
-  background: linear-gradient(#A3BCF9, #4286f4)
+  background: linear-gradient(#ffe066, #ffaa80)
 
 }
+
+
 .v1{
-  background: linear-gradient(#c6a0f7, #4286f4);
+  background: linear-gradient(#ffaa80, #ff7733);
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 
 }
 
 #v2{
-background: linear-gradient(#c6a0f7, #4286f4);
-
+background: linear-gradient(#ff7733, #4286f4);
 }
 #v3{
 background: linear-gradient(#c6a0f7, #4286f4);
-
 }
-
-
 
 .option{
   z-index: 1;
@@ -166,5 +173,11 @@ background: linear-gradient(#c6a0f7, #4286f4);
 
 }
 #herLoader{
-  max-width: 300px;
+  max-width: 400px;
+  max-height: 400px;
+  position: sticky;
+  top:50%;
+  left: 50%;
+  transform: translate(-150px, -150px);
+
 }
