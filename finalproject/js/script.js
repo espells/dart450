@@ -22,8 +22,8 @@ $(".next").hide();
   {
     start: 'autostart',
     type: 'oneByOne',
-    duration: 100,
-    file: '/images/squiggle.svg'
+    duration: 150,
+    file: '/images/squiggleNew.svg'
   }, mycallback);
 
   function mycallback(){
@@ -107,6 +107,7 @@ $(".next").hide();
   });
 
   // scrolls right if right key has been pressed.
+  // I'm not deleting this because it will be helpful in the future for keyboard setup
     // $(document).keydown(function() {
     //   console.log(event.which);
     //
@@ -143,8 +144,9 @@ $(".next").hide();
       }
     });
 
+// Functions for each scenario with the correct annyang response to be said and then the good and bad respones the computer says.
     function setupCleanRoomAnnyang() {
-      correctAnnyangPhrase = "yes";
+      correctAnnyangPhrase = "do your damn dishes";
       correctResponse = "That's what I'm talking about! Screw their feelings!";
       incorrectResponse = "That's not what I said. Now, try again and don't hold back!";
       annyang.resume();
@@ -186,7 +188,10 @@ $(".next").hide();
     }
 
     function showNextButton(){
-        $(".next").show();
+      console.log("showing next button")
+      $("#herLoader").fadeOut(1000);
+        $(".next").delay(1000).fadeIn(1000);
+        console.log("next botton shown")
     }
 
 

@@ -83,45 +83,47 @@ section {
 
 }
 
-#v2{
-background: linear-gradient(#ff7733, #4286f4);
+.v2{
+  background: linear-gradient(#ff7733, #ff4d4d);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-#v3{
-background: linear-gradient(#c6a0f7, #4286f4);
+
+.v3{
+  background: linear-gradient(#ff4d4d, #ff9999);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .option{
-  z-index: 1;
+
   font-size: 3em;
   max-width: 600px;
   max-height: 200px;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 18%;
   color: white;
   font-family: 'Josefin Sans';
   vertical-align: middle;
 
 
 }
-.option_answer_yes{
-  z-index: 2;
-  font-size: 2em;
-  color: white;
-  font-family: 'Josefin Sans';
-  left: 49%;
-  top: 185%;
+.option_answer_contain{
   display: flex;
-  position: absolute;
+  justify-content: center;
+
 }
-.option_answer_no{
-  z-index: 2;
-  font-size: 2em;
+.option_answer{
+  padding: 75px 75px 0px 75px;
   color: white;
   font-family: 'Josefin Sans';
-  position: absolute;
-  left: 90%;
-  top:150%;
+  display: flex;
 }
+
 .v1_container{
   display: flex;
   justify-content: center;
@@ -142,13 +144,13 @@ background: linear-gradient(#c6a0f7, #4286f4);
   animation: pulsate 2s ease-out;
   animation-iteration-count: infinite;
   opacity: 1;
-  border: 15px solid white;
+  border: 10px solid white;
   border-radius: 100%;
   width: 300px;
   height: 300px;
   margin: 0;
   display: flex;
-  position: absolute;
+  position: relative;
   top:50%;
   left: 50%;
   justify-content: center;
@@ -161,23 +163,29 @@ background: linear-gradient(#c6a0f7, #4286f4);
     100% {opacity: 0.1;}
 }
 
-.material-icons {
+.material-icons.next {
   animation: pulsate 2s ease-out;
   animation-iteration-count: infinite;
   opacity: 1;
   color: white;
   padding-top: 25%;
   font-size: 150px !important;
+}
 
-
-
+.material-icons.arrow_option{
+  font-size: 60px;
+  padding-right: 80px;
+  padding-left: 80px;
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 1;
 }
 #herLoader{
-  max-width: 400px;
-  max-height: 400px;
+  width: 450px;
+  height: auto;
   position: sticky;
   top:50%;
   left: 50%;
-  transform: translate(-150px, -150px);
+  transform: translate(-225px, -50px);
 
 }
