@@ -2,15 +2,18 @@
 
 Final Project
 Emma Spellacy
+April 29th 2018
 
-This script creates page navigation,
-contains repsonse voice, annyang, and small animations
+This script contains repsonse voice, annyang, and small animations
 
 **********************************************/
+
+// Varaibles for the current convo, the "next" convo(part2) and the strings for the conversations incuding the computers initial response, the correct annyang phrase, and the phrases the computer responds with
 var inMenu = true;
 var voiceType = "UK English Female";
 var currentConversation = null;
 var nextConversation = null;
+// objects for each "scenario"
 var conversations = {
   dishes: {
     part1: {
@@ -55,13 +58,16 @@ var conversations = {
     }
   }
 }
+
+// homepage phrase
 var openingPhrase = "Glad we can talk together now. Here are some icebreakers.";
+
 
 $(document).ready(function () {
   $(".intro").fadeIn(1000);
-  //  Intro, when user clicks "yes", computer resonds happilly.
+  //  Intro, when user clicks "yes", computer resonds happilly. This fades in the initial welcome message, fades it out when you click yes, and then fades in the new convo options
   $(".yes").click(function() {
-    speak("K", function() {
+    speak(openingPhrase, function() {
       $(".intro").fadeOut(function() {
         $(".conversations").fadeIn();
       })
@@ -87,6 +93,9 @@ $(document).ready(function () {
   annyang.pause();
 });
 
+// newly revised handleUserSpeech function: same functionally, if the correct annyyang phrase is said the correct scenario chosen, the computer will call the "next" conversation and then make it null.
+//  speakAndListen then passes the initial response of the next convo
+// if no "next" convo, user is returned to homepage
 function handleUserSpeech(phrase) {
   var phrase = phrase.toLowerCase();
   if (phrase === currentConversation.correctAnnyangPhrase) {
@@ -104,6 +113,9 @@ function handleUserSpeech(phrase) {
   }
 }
 
+
+// Function: How the conversations are defined.
+// defines part 1 as current and part 2 as next. When convo starts, the loader symbol appears, showing the computer is "thinking"
 function setupConversation(conversation) {
   currentConversation = conversation.part1;
   nextConversation = conversation.part2;
@@ -113,6 +125,7 @@ function setupConversation(conversation) {
   })
 }
 
+// Function: How the computer speaks- passes the onend function, defined above in handleUserSpeech. If that function goes through, it will say designated phrase, with defined voiceType.
 function speak(phrase, onEnd) {
   if (onEnd) {
     responsiveVoice.speak(phrase, voiceType, { onend: onEnd });
@@ -121,11 +134,13 @@ function speak(phrase, onEnd) {
   }
 }
 
+// Function: Annyang resumes and user can speak.
 function speakAndListen(phrase) {
   speak(phrase);
   annyang.resume();
 }
 
+// Function: Reloads to the homepage.
 function returnToMenu() {
   window.location.reload(true)
 }

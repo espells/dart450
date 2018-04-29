@@ -1,106 +1,72 @@
 /*
 
-DART 450, Winter 2018
+DART 450
 Final Project
+April 29th 2018
 Emma Spellacy
 
-
 */
-body{
+
+html, body {
   margin: 0;
-}
-html{
   height: 100%;
   width: 100%;
-  /*overflow: hidden;*/
-
 }
-section {
-  width: 100vw;
-  height: 100vh;
-
-}
-
-.horizontal_scroll {
-  display: inline-flex;
-
-}
-
 
 .text_intro{
-  display: none;
   text-align: center;
   font-size: 3em;
   color: white;
-  font-family: 'Josefin Sans';
   position: relative;
-  margin-top: 10%;
 }
+
 .text{
   font-size: 3em;
   color: white;
   font-family: "Avenir";
   padding: 120px;
   margin: 0;
-
-
 }
-.answer_container{
-  max-width: 500px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 10px;
-  color: white;
-  font-size: 2em;
+
+.wrapper {
+  padding-top: 10%;
+  background: linear-gradient(#ffe066, #ffaa80);
   font-family: 'Josefin Sans', sans-serif;
-  left: 31%;
-  top: 20%;
-  overflow: hidden;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.answer{
+
+.hidden {
   display: none;
-  max-width: 160px;
 }
+
+.conversations {
+  max-width: 500px;
+}
+
+.conversations ul {
+  font-size: 2em;
+}
+
+.answer_container{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+  margin-top: 10%;
+  min-width: 500px;
+}
+
 .answer:hover{
   opacity: .5;
   color: blue;
   cursor: pointer;
 }
 
-#home{
-  background: linear-gradient(#ffe066, #ffaa80)
-
-}
-
-
-.v1{
-  background: linear-gradient(#ffaa80, #ff7733);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-
-}
-
-.v2{
-  background: linear-gradient(#ff7733, #ff4d4d);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.v3{
-  background: linear-gradient(#ff4d4d, #ff9999);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
 .option{
-
   font-size: 3em;
   max-width: 600px;
   max-height: 200px;
@@ -109,8 +75,6 @@ section {
   color: white;
   font-family: 'Josefin Sans';
   vertical-align: middle;
-
-
 }
 .option_answer_contain{
   display: flex;
@@ -120,34 +84,9 @@ section {
 .option_answer{
   padding: 75px 75px 0px 75px;
   color: white;
-  font-family: 'Josefin Sans';
   display: flex;
 }
 
-.v1_container{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-}
-#breakup{
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.next{
-  /*display: none;*/
-}
-#dishes{
-  width: 100vw;
-  height: 100vh;
-}
-
-#dishes2{
-  width: 100vw;
-  height: 100vh;
-}
 .circle{
   animation: pulsate 2s ease-out;
   animation-iteration-count: infinite;
@@ -162,7 +101,6 @@ section {
   top:70%;
   left:50%;
   justify-content: center;
-  /*transform: translate(-37.5px, -37.5px);*/
  }
 
 @-webkit-keyframes pulsate {
@@ -188,30 +126,7 @@ section {
   animation-iteration-count: infinite;
   opacity: 1;
 }
-#herLoader{
-  width: 450px;
-  height: auto;
-  position: relative;
-  top:30%;
-  left: 50%;
-  transform: translate(-225px, -50px);
 
-}
-
-#herLoader2{
-  width: 450px;
-  height: auto;
-  position: relative;
-  top:30%;
-  left: 50%;
-  transform: translate(-225px, -50px);
-}
-
-.newLoad{
+.loader {
   width: 300px;
-  height: auto;
-  position: relative;
-  top:50%;
-  left: 50%;
-  transform: translate(-150px, -150px);
 }

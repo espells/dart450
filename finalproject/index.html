@@ -11,180 +11,52 @@ Description of project and purpose of HTML...
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<head>
+    <title> Unhelpful Advice </title>
 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!--  Responsive voice script-->
 
-  <title> Unhelpful Advice </title>
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  <!-- annyang script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src ="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"> </script>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-<!--  Responsive voice script-->
+    <!-- FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,400i,600,600i|Quicksand:300,400,500,700" rel="stylesheet">
+      <!--ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-<!-- annyang script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-  <script src ="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <!-- Include the script file -->
+    <script src="js/jquery.visible.js"></script>
+    <script src="js/script.js"></script>
+  </head>
 
-<!-- FONTS  -->
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,400i,600,600i|Quicksand:300,400,500,700" rel="stylesheet">
-  <!--ICONS -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <body>
+    <div class="wrapper">
+      <img class="loader hidden" src="images/newLoadcolor.svg"></img>
+      <div class="hidden intro">
+        <div class="text_intro">Hi there. <br><br>Want to talk one on one? </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <!-- Include the script file -->
-<script src="js/jquery.visible.js"></script>
-<script src="js/script.js"></script>
-
-</head>
-
-<!-- Home Page -->
-
-<body>
-    <div class="horizontal_scroll">
-
-        <section id="home" class="down">
-
-          <div class="text_intro">Hi there. <br><br>Want to talk one on one? </div>
-
-          <div class="answer_container">
-            <div class="answer yes"> I'd love to. </div>
-            <div class="answer no"> No thanks. </div>
-          </div>
-
-
-        </section>
+        <div class="answer_container">
+          <div class="answer yes"> I'd love to. </div>
+          <div class="answer no"> No thanks. </div>
+        </div>
       </div>
 
-<!-- Option 1- DISHES -->
-    <div class="horizontal_scroll">
-
-          <section class="v1 up down right">
-            <div class="v1_container">
-
-                <div class="option">You need to confront your roomate on their dirty pile of dishes.
-                  <div class="option_answer_contain">
-                    <div class="option_answer"> No </div>
-                    <div class="option_answer"> Yes </div>
-                  </div>
-                  <i class="arrow_option material-icons">keyboard_arrow_down</i>
-                  <i class="arrow_option material-icons">keyboard_arrow_right</i>
-                </div>
-
-            </div>
-          </section>
-
-          <section class="v1">
-            <div id="dishes">
-              <div class="next circle">
-                <i class="next material-icons">arrow_forward</i>
-              </div>
-              <img class="newLoad" src="images/newLoadcolor.svg"></img>
-              <!-- <div id="herLoader"></div> -->
-
-            </div>
-
-
-          </section>
-
-          <section class="v1">
-            <div id="dishes2">
-                <img class="newLoad" src="images/newLoadcolor.svg"></img>
-                  <!-- <div id="herLoader2"></div> -->
-            </div>
-
-
-          </section>
-
-
-
-
+      <div class="conversations hidden">
+        <div class="text_intro">What do you want to talk about?</div>
+        <ul>
+          <li onclick="setupConversation(conversations.dishes)">You need to confront your roomate on their dirty pile of dishes.</li>
+          <li onclick="setupConversation(conversations.breakup)">You want to break up with your significant other.</li>
+          <li onclick="setupConversation(conversations.burntHouse)">Telling your parents the house burned down.</li>
+        </ul>
+      </div>
     </div>
-    <!-- Option 2 BREAKUP -->
-        <div class="horizontal_scroll">
-
-              <section class="v2">
-                <div class="v1_container">
-
-                    <div class="option"> You want to break up with your significant other.
-                      <div class="option_answer_contain">
-                        <div class="option_answer"> No </div>
-                        <div class="option_answer"> Yes </div>
-                      </div>
-                        <i class="arrow_option material-icons">keyboard_arrow_down</i>
-                        <i class="arrow_option material-icons">keyboard_arrow_right</i>
-                    </div>
-
-
-                </div>
-
-              </section>
-
-              <section class="v2">
-
-                <div id="breakup">
-                  <img class="newLoad" src="images/newLoadcolor.svg"></img>
-
-                  <!-- <div id="herLoader"></div>
-                    <div class="next circle">
-                    <i class="next material-icons">arrow_forward</i>
-                  </div> -->
-                </div>
-
-              </section>
-
-              <section class="v2">
-
-                <div id="breakup2">
-                  <img class="newLoad" src="images/newLoadcolor.svg"></img>
-
-                </div>
-
-              </section>
-
-
-
-        </div>
-
-        <div class="horizontal_scroll">
-
-              <section class="v3">
-                <div class="v1_container">
-                  <div class="option"> Telling your parents the house burned down.
-                    <div class="option_answer_contain">
-                      <div class="option_answer"> No </div>
-                      <div class="option_answer"> Yes </div>
-                    </div>
-                    <i class="arrow_option material-icons">keyboard_arrow_down</i>
-                    <i class="arrow_option material-icons">keyboard_arrow_right</i>
-                  </div>
-                </div>
-
-              </section>
-
-              <section class="v3">
-
-                <div id="burntHouse">
-                  <img class="newLoad" src="images/newLoadcolor.svg"></img>
-
-                </div>
-
-              </section>
-
-              <section class="v3">
-
-                <div id="burntHouse2">
-                  <img class="newLoad" src="images/newLoadcolor.svg"></img>
-
-                </div>
-
-              </section>
-
-        </div>
-
-
-</body>
-
+  </body>
 </html>
