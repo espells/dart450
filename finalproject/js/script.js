@@ -67,7 +67,7 @@ $(document).ready(function () {
   $(".intro").fadeIn(1000);
   //  Intro, when user clicks "yes", computer resonds happilly. This fades in the initial welcome message, fades it out when you click yes, and then fades in the new convo options
   $(".yes").click(function() {
-    speak( openingPhrase, function() {
+    speak(openingPhrase, function() {
       $(".intro").fadeOut(function() {
         $(".conversations").fadeIn();
       })
