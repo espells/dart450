@@ -17,27 +17,27 @@ var nextConversation = null;
 var conversations = {
   dishes: {
     part1: {
-      initialResponse: "Utterly disgusting. Tell them to Doo their damn dishes!",
-      correctAnnyangPhrase: "hello",
+      initialResponse: "Oh my god that is so gross. Tell them to do their damn dishes!",
+      correctAnnyangPhrase: "do your damn dishes",
       correctResponse: "That's what I'm talking about! Screw their feelings!",
-      incorrectResponse: "That's not what I said. Now, try again and don't hold back!"
+      incorrectResponse: "That's not what I said. Now, try again and don't hold back! Remeber, just repeat what I said."
     },
     part2: {
-      initialResponse: "Okay, now that you're all warmed up, say you're so gross.",
-      correctAnnyangPhrase: "you are so gross",
-      correctResponse: "Wow you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you  have said to me.",
-      incorrectResponse: "It's ok to be mean. Remember that time they didn't wash them for a weak?"
+      initialResponse: "Okay, now that you're all warmed up, how about you say this: Grab the sponge and wash!",
+      correctAnnyangPhrase: "grab the sponge and wash",
+      correctResponse: "Wow, you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you have said to me.",
+      incorrectResponse: "It's ok to be mean. Remember that time they didn't wash them for a week? Now do what I said."
     }
   },
   breakup: {
     part1: {
-      initialResponse: "todo",
+      initialResponse: "That sucks to hear. There is no way this will be easy. How about saying this: I am in love with someone else.",
       correctAnnyangPhrase: "i am in love with someone else",
-      correctResponse: "you're sick to say that to someone you used to share a life with. But I like it",
+      correctResponse: "you're sick to say that to someone you used to share a life with. But I like it. ",
       incorrectResponse: "That will never work. Now say what I told you to say."
     },
     part2: {
-      initialResponse: "todo",
+      initialResponse: "Now, let us really let them know we are serious. Say we need to break up. And with some emotion.",
       correctAnnyangPhrase: "we need to break up",
       correctResponse: "Wow, I think I may actually start crying myself and i'm not even your partner. Go on now and rip off the bandaid in real life.",
       incorrectResponse: "I said with emotion. I thought I was the computer not you!"
@@ -45,13 +45,13 @@ var conversations = {
   },
   burntHouse: {
     part1: {
-      initialResponse: "todo",
+      initialResponse: "Wow I don't even know how you managed this one. But anyways, how about you apologize by saying you are so sorry you burnt the house down. ",
       correctAnnyangPhrase: "i am so sorry i burnt the house down",
-      correctResponse: "That's all you have to say? That you're sorry?",
+      correctResponse: "That's all you have to say? That you're sorry? Where are they going to live?",
       incorrectResponse: "Is that the best you can do?"
     },
     part2: {
-      initialResponse: "todo",
+      initialResponse: "C'mon now. They have no house. Say I beg of you to forgive me. ",
       correctAnnyangPhrase: "i beg of you to forgive me",
       correctResponse: " Well well well. I guess you're sorry after all. Be prepared that if this did happen in real life, your parents may not be as forgiving as I am. Best of luck!",
       incorrectResponse: " I said beg, goddamn it! now get on your knees and do what I said!"
