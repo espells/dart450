@@ -23,7 +23,7 @@ var conversations = {
       incorrectResponse: "That's not what I said. Now, try again and don't hold back! Remeber, just repeat what I said."
     },
     part2: {
-      initialResponse: "Okay, now that you're all warmed up, how about you say this: Grab the sponge and wash!",
+      initialResponse: "Okay, now that you're all warmed up, how about you say this. Grab the sponge and wash!",
       correctAnnyangPhrase: "grab the sponge and wash",
       correctResponse: "Wow, you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you have said to me.",
       incorrectResponse: "It's ok to be mean. Remember that time they didn't wash them for a week? Now do what I said."
@@ -45,8 +45,8 @@ var conversations = {
   },
   burntHouse: {
     part1: {
-      initialResponse: "Wow. I don't even know how you managed this one. But anyways, how about you apologize by saying that you are so sorry you burnt the house down. ",
-      correctAnnyangPhrase: "i am so sorry i burnt the house down",
+      initialResponse: "Wow. I don't even know how you managed this one. But anyways, how about you apologize by saying that you are sorry you burnt the house down. ",
+      correctAnnyangPhrase: "i am sorry i burnt the house down",
       correctResponse: "That's all you have to say? That you're sorry? Where are they going to live?",
       incorrectResponse: "Is that the best you can do?"
     },
@@ -60,7 +60,7 @@ var conversations = {
 }
 
 // homepage phrase
-var openingPhrase = "Glad we can talk together now. Here are some icebreakers.";
+var openingPhrase = "Glad we can talk together now. Let me show you some topics we can go over.";
 
 
 $(document).ready(function () {
