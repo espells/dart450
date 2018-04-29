@@ -45,7 +45,7 @@ var conversations = {
   },
   burntHouse: {
     part1: {
-      initialResponse: "Wow I don't even know how you managed this one. But anyways, how about you apologize by saying you are so sorry you burnt the house down. ",
+      initialResponse: "Wow. I don't even know how you managed this one. But anyways, how about you apologize by saying that you are so sorry you burnt the house down. ",
       correctAnnyangPhrase: "i am so sorry i burnt the house down",
       correctResponse: "That's all you have to say? That you're sorry? Where are they going to live?",
       incorrectResponse: "Is that the best you can do?"
@@ -105,6 +105,7 @@ function handleUserSpeech(phrase) {
         nextConversation = null;
         speakAndListen(currentConversation.initialResponse);
       } else {
+        $(".loader").fadeOut(1000);
         returnToMenu();
       }
     });

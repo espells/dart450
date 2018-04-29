@@ -31,7 +31,7 @@ html, body {
 
 .wrapper {
   padding-top: 10%;
-  background: linear-gradient(#ffe066, #ffaa80);
+  background: linear-gradient(#ff6666, #ffb366);
   font-family: 'Josefin Sans', sans-serif;
   color: white;
   height: 100%;
@@ -50,7 +50,19 @@ html, body {
 }
 
 .conversations ul {
-  font-size: 2em;
+  font-size: 1.75em;
+  list-style-type: none;
+  text-align: center;
+}
+li{
+  padding-top: 10%;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition-duration: .5s;
+}
+li:hover{
+  opacity: .5;
+  color: blue;
 }
 
 .answer_container{
@@ -60,7 +72,10 @@ html, body {
   margin-top: 10%;
   min-width: 500px;
 }
-
+.answer{
+  transition-timing-function: ease-in;
+  transition-duration: .5s;
+}
 .answer:hover{
   opacity: .5;
   color: blue;
