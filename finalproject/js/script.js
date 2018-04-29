@@ -31,7 +31,7 @@ var conversations = {
   },
   breakup: {
     part1: {
-      initialResponse: "That sucks to hear. There is no way this will be easy. How about saying this: I am in love with someone else.",
+      initialResponse: "That sucks to hear. There is no way this will be easy. How about saying this. I am in love with someone else.",
       correctAnnyangPhrase: "i am in love with someone else",
       correctResponse: "you're sick to say that to someone you used to share a life with. But I like it. ",
       incorrectResponse: "That will never work. Now say what I told you to say."
