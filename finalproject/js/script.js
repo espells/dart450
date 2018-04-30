@@ -20,18 +20,18 @@ var conversations = {
       initialResponse: "Oh my god that is so gross. Tell them to do their damn dishes!",
       correctAnnyangPhrase: "do your damn dishes",
       correctResponse: "That's what I'm talking about! Screw their feelings!",
-      incorrectResponse: "That's not what I said. Now, try again and don't hold back! Remeber, just repeat what I said."
+      incorrectResponse: "That's not what I said. Now, try again and don't hold back! Remember, just repeat what I said."
     },
     part2: {
-      initialResponse: "Okay, now that you're all warmed up, how about you say this: Grab the sponge and wash!",
-      correctAnnyangPhrase: "grab the sponge and wash",
+      initialResponse: "Okay, now that you're all warmed up, how about you say this. Grab the sponge.",
+      correctAnnyangPhrase: "grab the sponge",
       correctResponse: "Wow, you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you have said to me.",
       incorrectResponse: "It's ok to be mean. Remember that time they didn't wash them for a week? Now do what I said."
     }
   },
   breakup: {
     part1: {
-      initialResponse: "That sucks to hear. There is no way this will be easy. How about saying this: I am in love with someone else.",
+      initialResponse: "That sucks to hear. There is no way this will be easy. How about saying this. I am in love with someone else.",
       correctAnnyangPhrase: "i am in love with someone else",
       correctResponse: "you're sick to say that to someone you used to share a life with. But I like it. ",
       incorrectResponse: "That will never work. Now say what I told you to say."
