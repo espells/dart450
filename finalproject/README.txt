@@ -1,7 +1,7 @@
 README.md for DART450
 
 BEFORE USING SITE: 
-Use in Google Chrome and make sure microphone have permission or site will not function. Speak loudly and clearly for best results.
+Use in Google Chrome and make sure microphone has permission or the site will not function. Speak loudly and clearly for best results.
 
 For my final project, I decided to make light of our newfound reliance on technology and how it has had a detrimental effect on our interpersonal skills and ability to communicate with people in our lives. The inspiration for this project came from a story my mom told me. She’s a mental health counselor, and her story consisted of a couple who were unable to have an argument in person; only over text did they feel comfortable voicing their opinions and issues they had with one another. They would even argue over text while in the same apartment. I thought this was ridiculous but not that shocking now that we are on our devices so much. I wanted to make a website that made fun of the fact that we are so uncomfortable having arguments and discussions with other people. 
 
