@@ -23,8 +23,8 @@ var conversations = {
       incorrectResponse: "That's not what I said. Now, try again and don't hold back! Remember, just repeat what I said."
     },
     part2: {
-      initialResponse: "Okay, now that you're all warmed up, how about you say this. Grab the sponge.",
-      correctAnnyangPhrase: "grab the sponge",
+      initialResponse: "Okay, now that you're all warmed up, how about you say this. Grab the sponge and clean.",
+      correctAnnyangPhrase: "grab the sponge and clean",
       correctResponse: "Wow, you seem to be way meaner then when we first met. I think my job is finished. Go an tell them in person what you have said to me.",
       incorrectResponse: "It's ok to be mean. Remember that time they didn't wash them for a week? Now do what I said."
     }
